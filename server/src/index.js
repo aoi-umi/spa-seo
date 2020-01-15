@@ -9,7 +9,8 @@ let config = {
 
 async function init() {
     const browser = await puppeteer.launch({
-        executablePath: config.chromePath
+        executablePath: config.chromePath,
+        args: ['--no-sandbox']
     });
 
     const app = express();
